@@ -46,16 +46,20 @@
   }
 
   &-title {
-    font-size: 100px;
+    font-size: 3vw;
     color: #ffffff;
     animation: flickerAnimation 10s infinite steps(10);
   }
   .scroll-button-dimensions {
+    font-size: 2vw;
     width: calc(100vw - 20%);
     height: 100px;
   }
   .music-icon {
-    top: 50px;
-    right: 50px;
+    top: 2vh;
+    right: 3vw;
+    width: 3.5vw; /* Scales with the viewport width */
+
+    height: auto; /* Maintains aspect ratio */
   }
 }

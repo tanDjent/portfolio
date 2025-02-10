@@ -23,21 +23,22 @@ const Home: React.FC = () => {
   return (
     <div className="w-full h-full home">
       <audio ref={audioRef} src={ChillGuy} loop autoPlay />
-      <div className="w-full h-full flex flex-col justify-between items-center relative">
-        <span className="cursor-pointer home-title">
-          Rest here weary traveler
-        </span>
-        <button className="scroll-button scroll-button-dimensions mb-[100px] text-5xl">
+      <div className="w-full h-full flex flex-col justify-between items-center ">
+        <div className="flex items-center">
+          <span className="home-title">
+            Rest here weary traveler, A Great Adventure Lies Ahead
+          </span>
+          <img
+            className="ml-[20px] mr- cursor-pointer music-icon"
+            src={isPlaying ? MusicIcon : MutedMusicIcon}
+            onClick={toggleMusic}
+          />
+        </div>
+
+        <button className="flex items-center justify-center scroll-button scroll-button-dimensions mb-[100px] ">
           Learn more about the Legendary Knight
         </button>
       </div>
-      <img
-        className="absolute music-icon"
-        src={isPlaying ? MusicIcon : MutedMusicIcon}
-        onClick={toggleMusic}
-        height={"100px"}
-        width={"100px"}
-      />
     </div>
   );
 };
