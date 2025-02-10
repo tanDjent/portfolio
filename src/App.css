@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+.scroll-button {
+  background: #c48f5a;
+  color: #4a2e14;
+  padding: 20px 40px;
+  border: 4px solid black;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+
+  /* Pixelated effect */
+  image-rendering: pixelated;
+
+  /* Fake scroll shape using before and after */
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background: #8d6238;
+    top: 0;
+  }
+
+  &::before {
+    left: -24px;
+  }
+
+  &::after {
+    right: -24px;
+  }
+
+  /* Shadow for depth */
+  box-shadow: 4px 4px 0 black, 8px 8px 0 #4a2e14;
+
+  /* Hover effect */
+  &:hover {
+    background: #d8a87b;
+    box-shadow: 2px 2px 0 black, 4px 4px 0 #4a2e14;
+  }
+}
