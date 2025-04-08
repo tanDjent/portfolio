@@ -1,5 +1,7 @@
 @import "tailwindcss";
-
+body {
+  font-family: "Pixelify Sans", serif;
+}
 .scroll-button {
   background: #c48f5a;
   color: #4a2e14;
