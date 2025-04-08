@@ -4,6 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 import svgr from "vite-plugin-svgr";
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/new-portfolio/",
+  base: "/portfolio/",
   plugins: [tailwindcss(), react(), svgr()],
 });
